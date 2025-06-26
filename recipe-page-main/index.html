@@ -23,19 +23,21 @@
 
     <style>
       * {
-  box-sizing: border-box; /* Apply to all elements */
-}
+        box-sizing: border-box; /* Apply to all elements */
+      }
+
       body {
-        font-family: "Outfit";
+        font-family: "Outfit", sans-serif;
         display: grid;
         place-items: center;
         margin: 0;
         background-color: hsl(30, 54%, 90%);
       }
+
       .container {
         background-color: hsl(0, 0%, 100%);
         width: 100%;
-        max-width: 650px;
+        max-width: 90%; /* Set max-width to 90% of the screen width */
         border-radius: 20px;
         box-shadow: rgba(239, 245, 248, 0.2) 0px 8px 24px;
         overflow: hidden;
@@ -43,23 +45,26 @@
         justify-items: left;
         grid-template-columns: 1fr;
         gap: 10px;
-        padding: 20px;
+        padding: 5vw; /* Padding as a percentage of the viewport width */
       }
+
       img {
-        width: 100%;
-        max-width: 650px;
+        width: 100%; /* Ensure the image scales with the container */
+        max-width: 100%; /* Prevents the image from stretching */
         border-radius: 20px;
       }
 
-      h1{
-        font-family: 'Young Serif';
+      h1 {
+        font-family: "Young Serif", serif;
         line-height: 0;
+        font-size: 5vw; /* Responsive font size based on viewport width */
       }
 
-      p, li{
+      p,
+      li {
         color: hsl(30, 10%, 34%);
         line-height: 32px;
-        font-size: 16px;
+        font-size: 4vw; /* Make text responsive to the viewport */
       }
 
       li::marker {
@@ -70,24 +75,26 @@
       .time {
         background-color: hsl(330, 100%, 98%);
         width: 100%;
-        padding: 20px;
+        padding: 5vw; /* Padding based on viewport width */
         border-radius: 10px;
         box-shadow: rgba(231, 183, 238, 0.1) 0px 8px 14px;
       }
 
       .time h3 {
         color: hsl(332, 51%, 32%);
+        font-size: 4.5vw; /* Responsive heading */
       }
 
-      .time li::marker{
+      .time li::marker {
         color: hsl(332, 51%, 32%);
       }
 
-      h2{
-        font-family: 'Young Serif';
+      h2 {
+        font-family: "Young Serif", serif;
         color: hsl(14, 45%, 36%);
         line-height: 0;
         margin-top: 20px;
+        font-size: 4.5vw; /* Responsive font size */
       }
 
       hr {
@@ -95,10 +102,10 @@
         width: 100%;
       }
 
-      table{
+      table {
         width: 100%;
         border-collapse: collapse;
-      } 
+      }
 
       table strong {
         color: hsl(14, 45%, 36%);
@@ -106,16 +113,18 @@
 
       td {
         border-bottom: 1px solid #ccc;
-        padding: 10px;
+        padding: 2vw;
+        font-size: 3.5vw; /* Scalable text inside table */
       }
 
       .attribution {
         margin-top: 20px;
-        font-size: 12px;
+        font-size: 2.5vw; /* Font size relative to viewport */
         text-align: center;
         position: relative;
         bottom: 0;
       }
+
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
@@ -211,7 +220,10 @@
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="https://www.linkedin.com/in/khadija-e-9486b422a/">Elhabchi Khadija.</a>
+      >. Coded by
+      <a href="https://www.linkedin.com/in/khadija-e-9486b422a/"
+        >Elhabchi Khadija.</a
+      >
     </div>
   </body>
 </html>
