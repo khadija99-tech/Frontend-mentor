@@ -1,57 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Four card feature section</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
 
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Four card feature section</title>
 
-  <div class="container">
-  <h1>Reliable, efficient delivery</h1>
-  <h2>Powered by Technology</h2>
-  <p>Our Artificial Intelligence powered tools use millions of project data points 
-    to ensure that your project is successful</p>
-  <div class="cards">
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-    <div class="card1">
-      <h3>Supervisor</h3>
-      <p>Monitors activity to identify project roadblocks</p>
-      <img src="images/icon-supervisor.svg" alt="icon-supervisor">
+      html,
+      body {
+        height: 100%;
+        font-family: "Poppins";
+        display: flex;
+        flex-direction: column;
+      }
+
+      .container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        text-align: center;
+        color: hsl(234, 12%, 34%);
+      }
+
+      p {
+        color: hsl(212, 6%, 44%);
+        font-size: 400;
+      }
+
+      h1 {
+        font-size: 30px;
+        font-weight: 200;
+      }
+
+      h2 {
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+
+      h3 {
+        margin-bottom: 8px;
+      }
+
+      .cards {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin: 6rem 0;
+        flex-wrap: wrap;
+      }
+
+      .card1,
+      .card2,
+      .card3,
+      .card4 {
+        position: relative;
+        background-color: hsl(0, 0%, 100%);
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        max-width: 300px;
+        text-align: left;
+        height: 250px;
+        border-top: 4px solid;
+      }
+
+      .card1 {
+        border-color: hsl(180, 62%, 55%);
+      }
+
+      .card2 {
+        border-color: hsl(0, 78%, 62%);
+      }
+
+      .card3 {
+        border-color: hsl(34, 97%, 64%);
+      }
+
+      .card4 {
+        border-color: hsl(212, 86%, 64%);
+      }
+
+      /* Nested column layout */
+      .nested {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .cards img {
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+      }
+
+      /* Responsive behavior */
+      @media (max-width: 768px) {
+        .cards {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .nested {
+          flex-direction: column;
+        }
+      }
+
+      /* Sticky footer */
+      footer {
+        background-color: hsl(212, 6%, 44%);
+        text-align: center;
+        padding: 1rem;
+        margin-top: auto; /* pushes footer to bottom */
+      }
+
+      footer .attribution {
+        color: hsl(0, 0%, 100%);
+      }
+
+      .attribution a {
+        color: hsl(34, 97%, 64%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Reliable, efficient delivery</h1>
+      <h2>Powered by Technology</h2>
+      <p>
+        Our Artificial Intelligence powered tools use millions of project data
+        <br />
+        points to ensure that your project is successful
+      </p>
+      <div class="cards">
+        <div class="card1">
+          <h3>Supervisor</h3>
+          <p>Monitors activity to identify project roadblocks</p>
+          <img src="images/icon-supervisor.svg" alt="icon-supervisor" />
+        </div>
+        <div class="nested">
+          <div class="card2">
+            <h3>Team Builder</h3>
+            <p>
+              Scans our talent network to create the optimal team for your
+              project
+            </p>
+            <img src="images/icon-team-builder.svg" alt="icon-team-builder" />
+          </div>
+          <div class="card3">
+            <h3>Karma</h3>
+            <p>Regularly evaluates our talent to ensure qualit</p>
+            <img src="images/icon-karma.svg" alt="icon-karma" />
+          </div>
+        </div>
+        <div class="card4">
+          <h3>Calculator</h3>
+          <p>
+            Uses data from past projects to provide better delivery estimates
+          </p>
+          <img src="images/icon-calculator.svg" alt="icon-calculator" />
+        </div>
+      </div>
     </div>
-    <div class="card2">
-      <h3>Team Builder </h3>
-      <p>Scans our talent network to create the optimal team for your project</p>
-      <img src="images/icon-supervisor.svg" alt="icon-supervisor">
-    </div>
-    <div class="card3">
-      <h3>Karma</h3>
-      <p>  Regularly evaluates our talent to ensure qualit      </p>
-      <img src="images/icon-supervisor.svg" alt="icon-supervisor">
-    </div>
-    <div class="card4">
-      <h3>Calculator</h3>
-      <p>Uses data from past projects to provide better delivery estimates</p>
-      <img src="images/icon-supervisor.svg" alt="icon-supervisor">
-    </div>
-  </div>
-
-</div>
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by  <a href="https://www.linkedin.com/in/khadija-e-9486b422a/"
-      >Elhabchi Khadija.
-    </a>
-    </p>
-  </footer>
-</body>
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://www.linkedin.com/in/khadija-e-9486b422a/"
+          >Elhabchi Khadija.
+        </a>
+      </p>
+    </footer>
+  </body>
 </html>
