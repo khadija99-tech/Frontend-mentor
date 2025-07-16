@@ -114,6 +114,19 @@
     line-height: 1.8;
       }
 
+      @media (max-width: 768px) {
+        .container {
+          grid-template-columns: 1fr;
+          padding: 20px;
+        }
+        .Daniel,
+        .Patrick,
+        .Kira {
+          grid-column: span 1;
+          grid-row: auto;
+        }
+      }
+
       .attribution {
         position: fixed;
         bottom: 0;
@@ -238,7 +251,7 @@
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="https://www.linkedin.com/in/khadija-e-9486b422a/">Elhabchi Khadija</a>.
     </div>
   </body>
 </html>
